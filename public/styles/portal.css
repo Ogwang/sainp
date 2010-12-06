@@ -1,0 +1,73 @@
+@import url(portal_1.css);
+@import url(portal_2.css);
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    line-height: 1.3em;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F0F0F0;
+    text-align: center;
+
+}
+
+a:link, a:visited {
+    color:           #006699;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+h1 {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.2em;
+    color:     #006699;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #006699;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul ul {
+    list-style-type: disc;
+}
+
+ul ul ul {
+    list-style-type: none;
+}
+
+ol {
+	font-size: 0.9em;
+}
+
+label {
+    font:  bold 100% Arial, sans-serif;
+    color: #334d55;
+    FONT-SIZE: 12px;
+	font-weight: bold;
+	width: 10em; 
+}
+
+/* estilos para formulários */
+form input {
+	BORDER-RIGHT: #2b3a73 1px solid;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #2b3a73;
+	BORDER-BOTTOM: #2b3a73 1px solid;
+	BACKGROUND-COLOR: #e1e8f1
+}
+
+p {
+    font-size: 0.9em;
+}

@@ -1,0 +1,129 @@
+<div id='research'>
+<form id='filters' name="filters" action='<?php echo $this->baseUrl(); ?>/research/research' method='post'>
+<div id='filtersdiv' >
+	<dl>
+		<dt>
+			<dd>
+				<label for='sector'>Setor: </label></dd>
+			<dd>
+				<select name="sector" id="sector" class="Formulario_Combo" onchange="this.form.submit();">
+				<option value="">Todos</option>
+				<?php foreach ($this->sector as $sector) {
+						if ($sector->CLSE_NM_ID == $this->selectedSector) {
+							$selSector = " selected ";
+						} else {
+							$selSector = null;
+						} ?>
+					<option <?php echo $selSector; ?> value="<?php echo $sector->CLSE_NM_ID; ?>">
+					<?php echo $sector->CLSE_TX_Setor_Economico; ?>
+					</option>
+				<?php } ?>
+				</select>
+			</dd>
+		</dt>
+		
+		<dt>
+			<dd>
+				<label for='subsector'>Subsetor: </label>
+			</dd>
+			<dd>
+				<select name="subsector" class="Formulario_Combo" id="subsector" onchange="this.form.submit();">
+				<option value="">Todos</option>
+				<?php foreach ($this->subsector as $subsector) {
+						if ($subsector->CLSU_NM_ID == $this->selectedSubsector) {
+							$selSubsector = " selected ";
+						} else {
+							$selSubsector = null;
+						} ?>
+					<option <?php echo $selSubsector; ?> value="<?php echo $subsector->CLSU_NM_ID; ?>">
+					<?php echo $subsector->CLSU_TX_Subsetor_Economico; ?>
+					</option>
+				<?php } ?>
+				</select>
+			</dd>
+		</dt>
+		
+		<dt>
+			<dd>
+				<label for='segment'>Segmento: </label>
+			</dd>
+			<dd>
+				<select name="segment" class="Formulario_Combo" id="segment" onchange="this.form.submit();">
+				<option value="">Todos</option>
+				<?php foreach ($this->segment as $segment) {
+						if ($segment->CLSG_NM_ID == $this->selectedSegment) {
+							$selSegment = " selected ";
+						} else {
+							$selSegment = null;
+						} ?>
+					<option <?php echo $selSegment; ?> value="<?php echo $segment->CLSG_NM_ID; ?>">
+					<?php echo $segment->CLSG_TX_Segmento_Economico; ?>
+					</option>
+				<?php } ?>
+				</select>
+			</dd>				
+		</dt>
+		
+		<dt>
+			<dd>
+				<label for='assetcod'>Código da Ação:</label>
+			</dd>
+			<dd>
+				<input type="text" name="assetcod" id="assetcod">
+			</dd>
+		</dt>
+		
+		<dt>
+			<input type="submit" name="pesquisar" id="pesquisar" value="Pesquisar" class="Formulario_Botao">
+		</dt>
+
+</div>
+
+<br>
+
+<div id='results' align="center">
+<table>
+<thead>
+   <tr class="Tabela_Cabecalho">
+      <th>
+         Nome do Pregao
+      </th>
+      <th>
+         Setor Economico
+      </th>
+      <th>
+         Subsetor Economico
+      </th>
+      <th>
+         Segmento Economico
+      </th>
+   </tr>
+</thead>
+<tbody>
+   <?php
+   		foreach ($this->companies as $comp) { 
+			if (($comp->CLSE_NM_ID == $this->selectedSector || $this->selectedSector == "") && ($comp->CLSU_NM_ID == $this->selectedSubsector || $this->selectedSubsector == "") && ($comp->CLSG_NM_ID == $this->selectedSegment|| $this->selectedSegment == "")) {
+   ?>
+	   <tr class="tableRow1">
+	      <td>
+	         <a href="<?php echo $this->baseUrl(); ?>/research/summary/code/<?php echo $comp->COEM_TX_ID; ?>"><?php echo $comp->COEM_Nome_Pregao; ?></a>
+	      </td>
+	      <td>
+	         <a href="<?php echo $this->baseUrl(); ?>/classification/classification/sector/<?php echo $comp->CLSE_NM_ID; ?>"><?php echo $comp->CLSE_TX_Setor_Economico; ?></a>
+	      </td>
+	      <td>
+	         <a href="<?php echo $this->baseUrl(); ?>/classification/classification/subsector/<?php echo $comp->CLSU_NM_ID; ?>"><?php echo $comp->CLSU_TX_Subsetor_Economico; ?></a>
+	      </td>
+	      <td>
+	         <a href="<?php echo $this->baseUrl(); ?>/classification/classification/segment/<?php echo $comp->CLSG_NM_ID; ?>"><?php echo $comp->CLSG_TX_Segmento_Economico; ?></a>
+	      </td>
+	   </tr>
+   <?php
+   			}
+		}
+   ?>
+</tbody>
+</table>
+</div>
+</form>
+</div>

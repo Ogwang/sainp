@@ -1,0 +1,165 @@
+<?php include 'header.phtml'; ?>
+
+<div id='cashflow'>
+<table>
+<thead>
+   <tr>
+      <td>
+         <a id="reward" name="reward" href="<?php echo $this->baseUrl(); ?>/research/rewardyear/code/<?php echo $this->company->COEM_TX_ID; ?>/year/<?php echo $this->cashflow->FLCA_NM_Ano; ?>/actionName/cashflow">anterior</a>
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_NM_Ano; ?>
+      </td>
+      <td>
+      	<a id="forward" name="forward" href="<?php echo $this->baseUrl(); ?>/research/forwardyear/code/<?php echo $this->company->COEM_TX_ID; ?>/year/<?php echo $this->cashflow->FLCA_NM_Ano; ?>/actionName/cashflow">próximo</a>
+      </td>
+   </tr>
+</thead>
+<tbody>
+   <tr>
+      <td>
+         Atividades Operacionais:
+      </td>
+      <td>
+         &nbsp;
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Lucro Líquido
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Lucro_Liquido; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Depreciação
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Depreciacao; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Ajuste VL
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Ajuste_VL; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         &nbsp;
+      </td>
+      <td>
+         &nbsp;
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Mudanças nos Ativos e Passivos Circulantes
+      </td>
+      <td>
+         &nbsp;
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Variação no Contas a Receber
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Variacao_CR; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Variação nas Dívidas
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Variacao_Dividas; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Variação no Inventário
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Varicao_Inventario; ?>
+      </td>
+   </tr>
+   <tr>   
+      <td>
+         Andamento em Outras
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Andamento_Outras; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Gastos de Capital
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Gastos_Capital; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Investimentos
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Investimentos; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Investimentos (Outras)
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Investimento_Outras; ?>
+      </td>
+   </tr>
+   <tr>
+   <td>
+         Dividendos
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Dividendos; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Preço Venda
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Preco_Venda; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Empréstimos
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Emprestimos; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Financeiras Outras
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Financeiras_Outras; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Variação no Câmbio
+      </td>
+      <td>
+         <?php echo $this->cashflow->FLCA_VL_Variacao_Cambio; ?>
+      </td>
+   </tr>
+</tbody>
+</table>
+</div>

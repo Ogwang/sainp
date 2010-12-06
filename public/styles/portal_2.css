@@ -1,0 +1,12 @@
+.clear {
+	height: 0;
+	font-size: 1px;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	clear: both;
+}
+
+grayed {
+    color: gray;
+}

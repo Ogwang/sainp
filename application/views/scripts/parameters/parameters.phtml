@@ -1,0 +1,55 @@
+<div id='param_system'>
+
+<form action="<?php echo $this->baseUrl(); ?>/parameters/updateparam" method="post">
+
+<table width="405">
+<thead>
+  <tr>
+    <th width="204" >&nbsp;</th>
+    <th width="94">% Opera&ccedil;&atilde;o </th>
+    <th width="85">R$ (Fixo) </th>
+  </tr>
+</thead>
+<tbody>
+  <tr class="tableRow1">
+    <td >Taxa de Corretagem </td>
+    <td ><input name="tx_corret_perc" type="text" class="Formulario_CaixaTexto" id="tx_corret_perc" value="<?php echo $this->escape($this->param->PARA_NM_Taxa_Corretagem_Perc); ?>" size="15" /></td>
+    <td ><input name="tx_corret_reais" type="text" class="Formulario_CaixaTexto" id="tx_corret_reais" value="<?php echo $this->escape($this->param->PARA_VL_Taxa_Corretagem_Reais); ?>" size="15" /></td>
+  </tr>
+  <tr class="tableRow2">
+    <td >Taxa de Emolumentos </td>
+    <td ><input name="tx_emol_perc" type="text" class="Formulario_CaixaTexto" id="tx_emol_perc" value="<?php echo $this->escape($this->param->PARA_VL_Taxa_Emolumentos_Perc); ?>" size="15" /></td>
+    <td ><input name="tx_emol_reais" type="text" class="Formulario_CaixaTexto" id="tx_emol_reais" value="<?php echo $this->escape($this->param->PARA_VL_Taxa_Emolumentos_Reais); ?>" size="15" /></td>
+  </tr>
+  <tr class="tableRow1">
+    <td >Cust&oacute;dia</td>
+    <td >&nbsp;</td>
+    <td ><span >
+      <input name="custodia" type="text" class="Formulario_CaixaTexto" id="custodia" value="<?php echo $this->escape($this->param->PARA_VL_Custodia_Reais); ?>" size="15" />
+    </span></td>
+  </tr>
+  <tr class="tableRow2">
+    <td >Imposto de Renda </td>
+    <td ><span >
+      <input name="tx_ir" type="text" class="Formulario_CaixaTexto" id="tx_ir" value="<?php echo $this->escape($this->param->PARA_NM_IR); ?>" size="15" />
+    </span></td>
+    <td >&nbsp;</td>
+  </tr>
+  <tr class="tableRow1">
+    <td >Taxa Livre de Risco </td>
+    <td ><span >
+      <input name="tx_rf" type="text" class="Formulario_CaixaTexto" id="tx_rf" value="<?php echo $this->escape($this->param->PARA_NM_RF); ?>" size="15" />
+    </span></td>
+    <td >&nbsp;</td>
+  </tr>
+</tbody>
+</table>
+<input type="submit" name="salvar" id="salvar" value="Salvar">
+</form>
+
+
+
+
+
+
+</div>

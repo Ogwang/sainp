@@ -1,0 +1,21 @@
+<div id='summaryHeader'>
+
+<h1><?php echo $this->company->COEM_Denominacao_Social . " ( " . $this->company->COEM_Nome_Pregao . " )"; ?></h1>
+
+
+
+<h2><?php echo $this->page; ?></h2>
+
+
+<div>Setor Econ&ocirc;mico:
+<a href="<?php echo $this->baseUrl(); ?>/classification/classification/sector/<?php echo $this->classification[0]->CLSE_NM_ID; ?>"><?php echo $this->classification[0]->CLSE_TX_Setor_Economico; ?></a></div>
+
+ 
+<div>Subsetor:
+<a href="<?php echo $this->baseUrl(); ?>/classification/classification/subsector/<?php echo $this->classification[0]->CLSU_NM_ID; ?>" class="Texto_T3"><?php echo $this->classification[0]->CLSU_TX_Subsetor_Economico; ?></a></div>
+ 
+<div>Segmento:
+<a href="<?php echo $this->baseUrl(); ?>/classification/classification/segment/<?php echo $this->classification[0]->CLSG_NM_ID; ?>" class="Texto_T3"><?php echo $this->classification[0]->CLSG_TX_Segmento_Economico; ?></a></div>
+ 
+</div>
+<p>

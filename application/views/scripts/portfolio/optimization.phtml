@@ -1,0 +1,61 @@
+<div id='optimization'>
+
+<?php if (isset($this->stocks)) { ?>
+<?php $n=array(0,1,2,3,4,5,6,7,8,9); ?>
+<form action="<?php echo $this->baseUrl(); ?>/optimization/updateportfolio" method="post">
+<table>
+<thead>
+   <tr>
+   		<th>
+         
+      </th>
+      <th>
+         Opcoes
+      </th>
+      <th>
+         Ativo (%)
+      </th>
+      <th>
+         Retorno Esperado
+      </th>
+      <th>
+         Risco
+      </th>
+      <th>
+         VaR
+      </th>
+   </tr>
+</thead>
+<tbody>
+<?php  foreach ($this->deviationsEF as $key => $value) { ?>
+   <tr class="tableRow1">
+      <td>
+      <input type="checkbox">
+      </td>
+      <td>
+      <?php echo ($n[$key]+1); ?>
+      </td>
+      <td>
+         <?php foreach ($this->weightsEF[$key] as $k => $v) {
+         	 echo $this->escape($this->stocks[$k]);
+			 echo " ( {$this->percent($this->escape($this->weightsEF[$key][$k]),1)} )<br>";
+         } ?>
+      </td>
+      <td>
+         <?php echo $this->percent($this->expreturnsEF[$key], 1); ?>
+      </td>
+      <td>
+         <?php echo $this->percent($this->deviationsEF[$key], 1); ?>
+      </td>
+      <td>
+         <?php echo $this->number($this->VaREF[$key]); ?>
+      </td>
+   </tr>
+  <?php } ?> 
+</tbody>
+</table>
+<input type="submit" name="salvar" id="salvar" value="Salvar" class="Formulario_Botao">
+</form>
+<?php } else {echo "Nao ha acoes na sua carteira";} ?>
+
+</div>

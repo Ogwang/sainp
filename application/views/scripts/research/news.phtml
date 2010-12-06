@@ -1,0 +1,68 @@
+<?php require_once('../Connections/SAINP.php'); ?>
+<?php
+$pagina="Notícias";
+$colname_empresumo = "-1";
+if (isset($_GET['empresa'])) {
+  $colname_empresumo = (get_magic_quotes_gpc()) ? $_GET['empresa'] : addslashes($_GET['empresa']);
+}
+mysql_select_db($database_SAINP, $SAINP);
+$query_empresumo = sprintf("SELECT sis_codigo_empresa.COEM_TX_ID, sis_codigo_empresa.COEM_Nome_Pregao, sis_codigo_empresa.COEM_Denominacao_Social, sis_classificacao_setorial.CLSE_TX_Setor_Economico, sis_classificacao_setorial.CLSE_TX_Subsetor, sis_classificacao_setorial.CLSE_TX_Segmento FROM sis_codigo_empresa Inner Join sis_classificacao_setorial ON sis_codigo_empresa.CLSE_NM_ID = sis_classificacao_setorial.CLSE_NM_ID WHERE sis_codigo_empresa.COEM_TX_ID =  '%s'", $colname_empresumo);
+$empresumo = mysql_query($query_empresumo, $SAINP) or die(mysql_error());
+$row_empresumo = mysql_fetch_assoc($empresumo);
+$totalRows_empresumo = mysql_num_rows($empresumo);
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="CSS/sistema.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="empresa_navegacao">
+<?php @ require_once ("empresa_navegacao.php"); ?>
+</div>
+<div id="cabecalho">
+<?php @ require_once ("empresa_botoes.php"); ?>
+</div>
+<div id="cabecalho">
+<?php @ require_once ("empresa_cabecalho.php"); ?>
+</div>
+<table width="671" border="0">
+  <tr class="Texto_T1">
+    <td width="661"><a href="http://br.yahoo.com/financas/reuters/reuters/article.html?s=brfin/financas/060208/reuters/reuters/Indios_que_ocupam_ferrovia_Carajas_sequestram_empregados_da_VALE.html" target="_blank" class="Titulo2">&Iacute;ndios   que ocupam ferrovia Caraj&aacute;s sequestram empregados da VALE</a></td>
+  </tr>
+  <tr class="Texto_T2">
+    <td ><strong>Reuters</strong>&nbsp;(Quarta, Fev 8) </td>
+  </tr>
+  <tr class="Texto_T1">
+    <td><a href="http://br.yahoo.com/financas/reuters/reuters/article.html?s=brfin/financas/060208/reuters/reuters/BOVESPA-Mercado_tem_leve_repique_com_NY__mas_volta_a_cair.html" target="_blank" class="Titulo2">BOVESPA-Mercado   tem leve repique com NY, mas volta a cair</a></td>
+  </tr>
+  <tr class="Texto_T2">
+    <td ><strong>Reuters</strong>&nbsp;(Quarta, Fev 8) </td>
+  </tr>
+  <tr class="Texto_T1">
+    <td><a href="http://br.yahoo.com/financas/reuters/reuters/article.html?s=brfin/financas/060207/reuters/reuters/BOVESPA-Mercado_tem_dia_de_realizacao_de_lucros_e_fecha_em_queda.html" target="_blank" class="Titulo2">BOVESPA-Mercado   tem dia de realiza&ccedil;&atilde;o de lucros e fecha em queda</a></td>
+  </tr>
+  <tr class="Texto_T2">
+    <td ><strong>Reuters</strong>&nbsp;(Quarta, Fev 8) </td>
+  </tr>
+  <tr class="Texto_T1">
+    <td><a href="http://br.yahoo.com/financas/reuters/reuters/article.html?s=brfin/financas/060207/reuters/reuters/Indios_param_ferrovia_da_VALE_em_protesto_contra_governo.html" target="_blank" class="Titulo2">&Iacute;ndios   param ferrovia da VALE em protesto contra governo</a></td>
+  </tr>
+  <tr class="Texto_T2">
+    <td ><strong>Reuters</strong>&nbsp;(Ter&ccedil;a, Fev 7) </td>
+  </tr>
+  <tr class="Texto_T1">
+    <td><a href="http://br.yahoo.com/financas/reuters/reuters/article.html?s=brfin/financas/060203/reuters/reuters/BOVESPA-Indice_fecha_em_baixa_apos_dia_volatil.html" target="_blank" class="Titulo2">BOVESPA-&Iacute;ndice   fecha em baixa ap&oacute;s dia vol&aacute;til</a></td>
+  </tr>
+  <tr class="Texto_T2">
+    <td ><strong>Reuters</strong>&nbsp;(Ter&ccedil;a, Fev 7) </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>
+<?php
+mysql_free_result($empresumo);
+?>
