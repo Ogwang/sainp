@@ -1,0 +1,98 @@
+@import url(system_1.css);
+@import url(system_2.css);
+
+
+body {
+	font-family: Tahoma, Verdana, Arial,sans-serif;
+	color: #333333;
+	line-height: 1.166;	
+	margin: 10px;
+	padding: 0px;
+	background-color: #F0F0F0;
+	text-align: center;
+}
+
+a:link, a:visited {
+	font-style: normal;
+	text-decoration: none;
+	color: #000000;
+}
+
+
+h1 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #000000;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
+}
+
+h3 {
+	font-size: 14px;
+	color: #000000;
+}
+
+p {
+	font-size: 10px;
+}
+
+
+dd {
+	float: left;
+}
+
+
+
+
+
+/* estilos para formulários */
+input[type="submit"] {
+	BORDER-RIGHT: #2b3a73 1px solid;
+	BORDER-TOP: #2b3a73 1px solid;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	BORDER-LEFT: #2b3a73 1px solid;
+	COLOR: #2b3a73;
+	BORDER-BOTTOM: #2b3a73 1px solid;
+	BACKGROUND-COLOR: #e1e8f1
+}
+
+select {
+	BORDER-RIGHT: #003366 1px solid;
+	BORDER-TOP: #003366 1px solid;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 12px;
+	BORDER-LEFT: #003366 1px solid;
+	COLOR: #2b3a73;
+	BORDER-BOTTOM: #003366 1px solid;
+	BACKGROUND-COLOR: #ffffff;
+	clear: left;
+}
+
+label {
+	FONT-SIZE: 12px;
+	font-weight: bold;
+	width: 10em;
+	display: block;
+	float: left;
+}
+
+/* estilos para tabelas*/
+thead, tfoot {
+	background: #000066;
+	font-weight: bold;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 1;
+}
+
+tbody {
+	font-size:12px;
+	color:#000000;
+	background-color: #CFD9E2;
+}

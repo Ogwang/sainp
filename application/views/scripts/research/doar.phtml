@@ -1,0 +1,65 @@
+<?php include 'header.phtml'; ?>
+
+<div id='doar'>
+
+<table>
+<thead>
+   <tr>
+      <td>
+         <a id="reward" name="reward" href="<?php echo $this->baseUrl(); ?>/research/rewardyear/code/<?php echo $this->company->COEM_TX_ID; ?>/year/<?php echo $this->doar->DOAR_NM_Ano; ?>/actionName/doar">anterior</a>
+      </td>
+      <td>
+         <?php echo $this->doar->DOAR_NM_Ano; ?>
+      </td>
+      <td>
+      	<a id="forward" name="forward" href="<?php echo $this->baseUrl(); ?>/research/forwardyear/code/<?php echo $this->company->COEM_TX_ID; ?>/year/<?php echo $this->doar->DOAR_NM_Ano; ?>/actionName/doar">próximo</a>
+      </td>
+   </tr>
+</thead>
+<tbody>
+   <tr>
+      <td colspan="2">
+         Origens
+      </td>
+      <td>
+         <?php echo $this->doar->DOAR_VL_Origens; ?>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="2">
+         Aplicações
+      </td>
+      <td>
+         <?php echo $this->doar->DOAR_VL_Aplicacoes; ?>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="2">
+         Acréscimo Capital Circulante
+      </td>
+      <td>
+         <?php echo $this->doar->DOAR_VL_Acrescimo_Capital_Circulante; ?>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="2">
+         Variação Ativo Circulante
+      </td>
+      <td>
+         <?php echo $this->doar->DOAR_VL_Variacao_Ativo_Circulante; ?>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="2">
+         Variação Passivo Circulante
+      </td>
+      <td>
+         <?php echo $this->doar->DOAR_VL_Variacao_Passivo_Circulante; ?>
+      </td>
+   </tr>
+</tbody>
+</table>
+
+
+
+</div>

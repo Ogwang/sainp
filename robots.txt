@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /system
+Disallow: /index/about/
+Disallow: /index/register/
+Disallow: /index/require/
+Sitemap: http://www.sainp.net84.net/sitemap.xml

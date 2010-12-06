@@ -1,0 +1,62 @@
+<div id='classification'>
+
+
+<table>
+<thead>
+	<th>
+		<a href="<?php echo $this->baseUrl(); ?>/classification/classification/sector/">Setores</a>
+	</th>
+	<th>
+		<a href="<?php echo $this->baseUrl(); ?>/classification/classification/subsector/">Subsetores</a>
+	</th>
+	<th>
+		<a href="<?php echo $this->baseUrl(); ?>/classification/classification/segment/">Segmentos</a>
+	</th>
+</thead>
+<?php foreach ($this->sectors as $sector) { ?>
+   <tr>
+      <td>
+         <a href="<?php echo $this->baseUrl(); ?>/classification/classification/sector/<?php echo $sector->CLSE_NM_ID; ?>"><?php echo $sector->CLSE_TX_Setor_Economico; ?></a>
+      </td>
+      <td>
+         <table>
+         <?php foreach ($this->subsectors as $subsector) {
+         	 if ($subsector->CLSE_NM_ID == $sector->CLSE_NM_ID) { ?>
+		   <tr>
+		      <td  width="200px">
+		         <a href="<?php echo $this->baseUrl(); ?>/classification/classification/subsector/<?php echo $subsector->CLSU_NM_ID; ?>"><?php echo $subsector->CLSU_TX_Subsetor_Economico; ?></a>
+		      </td>
+		      <td>
+		         <table>
+		         	<?php foreach ($this->segments as $segment) {
+		         		if ($segment->CLSU_NM_ID == $subsector->CLSU_NM_ID) { ?>
+		         	<tr>
+		         		<td>
+		         			<a href="<?php echo $this->baseUrl(); ?>/classification/classification/segment/<?php echo $segment->CLSG_NM_ID; ?>"><b><?php echo $segment->CLSG_TX_Segmento_Economico; ?></b></a>
+		         		</td>
+		         		<?php
+		         			if ($this->showCompanies == true) {
+		         				echo "<td>";
+		         				foreach ($this->companies as $company) { 
+		         					if ($company->CLSG_NM_ID == $segment->CLSG_NM_ID) {
+										echo "<tr><td><a href='/sainp/research/summary/code/" . $company->COEM_TX_ID . "'>" . $company->COEM_Nome_Pregao . "</a></td></tr>";
+		         					}
+								}
+								echo "</td>";	
+		         			}
+		         		?>
+		         		
+		         	</tr>
+		         	<?php } } ?>
+		 		 </table>
+		      </td>
+		   </tr>
+		 <?php } } ?>
+		</table>
+      </td>
+   </tr>
+<?php } ?>
+</table>
+
+
+</div>

@@ -1,0 +1,242 @@
+<?php include 'header.phtml'; ?>
+
+<div id='balance'>
+
+
+<table>
+<thead>
+   <tr>
+      <td>
+         <a id="reward" name="reward" href="<?php echo $this->baseUrl(); ?>/research/rewardyear/code/<?php echo $this->company->COEM_TX_ID; ?>/year/<?php echo $this->balancesheet->BAPA_NM_Ano; ?>/actionName/balance">anterior</a>
+      </td>
+      <td>
+         <?php echo $this->balancesheet->BAPA_NM_Ano; ?>
+      </td>
+      <td>
+      	<a id="forward" name="forward" href="<?php echo $this->baseUrl(); ?>/research/forwardyear/code/<?php echo $this->company->COEM_TX_ID; ?>/year/<?php echo $this->balancesheet->BAPA_NM_Ano; ?>/actionName/balance">próximo</a>
+      </td>
+   </tr>
+</thead>
+
+<tbody>
+   <tr>
+      <td rowspan="2">
+         <table>
+			   <tr>
+			      <td>
+			         Ativo Circulante
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Ativo_Circulante; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Disponibilidades
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Disponibilidades; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Créditos
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Creditos; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Estoques
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Estoques; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Outros
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_AtivosOutros; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Ativo Não Circulante
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Ativo_Nao_Circulante; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Realizável a Longo Prazo
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_RealizaveLP; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Ativo Permanente
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Permanente; ?>
+			      </td>
+			   </tr>
+			</table>
+      </td>
+      <td>
+         <table>
+			   <tr>
+			      <td>
+			         Passivo Circulante
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Passivo_Circulante; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Empréstimos
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Emprestimos; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Debêntures
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Debentures; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Fornecedores
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Fornecedores; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Impostos
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Impostos; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Dividendos
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Dividendos; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Provisões
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Provisoes; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Dívidas PL
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_DividasPL; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Outros
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_PassivoOutros; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Passivo Não Circulante
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Passivo_Nao_Circulante; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Exigível a Longo Prazo
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_ExigivelLP; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Resultados EF
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_ResultadosEF; ?>
+			      </td>
+			   </tr>
+			</table>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <table>
+			   <tr>
+			      <td>
+			         Patrimônio Líquido
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_Patrimonio_Liquido; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Capital Social
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_CapitalSocial; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Reservas de Capital
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_ReservasCapital; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Reservas de Reavaliação
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_ReservasReavaliacao; ?>
+			      </td>
+			   </tr>
+			   <tr>
+			      <td>
+			         Reservas de Lucro
+			      </td>
+			      <td>
+			         <?php echo $this->balancesheet->BAPA_VL_ReservasLucro; ?>
+			      </td>
+			   </tr>
+			</table>
+      </td>
+   </tr>
+</tbody>
+</table>
+
+
+</div>

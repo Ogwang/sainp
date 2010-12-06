@@ -1,0 +1,138 @@
+<?php include 'header.phtml'; ?>
+
+<div id='dre'>
+
+<table>
+<thead>
+   <tr>
+      <td>
+         <a id="reward" name="reward" href="<?php echo $this->baseUrl(); ?>/research/rewardyear/code/<?php echo $this->company->COEM_TX_ID; ?>/year/<?php echo $this->dre->DREE_NM_Ano; ?>/actionName/dre">anterior</a>
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_NM_Ano; ?>
+      </td>
+      <td>
+         <a id="forward" name="forward" href="<?php echo $this->baseUrl(); ?>/research/forwardyear/code/<?php echo $this->company->COEM_TX_ID; ?>/year/<?php echo $this->dre->DREE_NM_Ano; ?>/actionName/dre">próximo</a>
+      </td>
+   </tr>
+</thead>
+<tbody>
+   <tr>
+      <td>
+         Receita Bruta de Vendas
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Receita_Bruta_Vendas; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Deduções da Receita Bruta
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Deducoes_Receita_Bruta; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Receita Líquida de Vendas
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Receita_Liquida_Vendas; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Custo dos Bens Vendidos
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Custo_Bens_Vendidos; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Resultado Bruto
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Resultado_Bruto; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Despesas/Receitas Operacionais
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Despesas_Receitas_Operacionais; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Resultado Operacional
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Resultado_Operacional; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Resultado Não Operacional
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Resultado_Nao_Operacional; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Resultado Antes da Tributação e Participação
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Resultado_Antes_Trib_Part; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Provisão de IR
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Provisao_IR; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         IR Diferido
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_IR_Diferido; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Participações e Contribuições Estatutárias
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Participacoes_Contrib_Estatutarias; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Reversão de Juros sobre Capital Próprio
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Reversao_Juros_Cap_Proprio; ?>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Lucro do Período
+      </td>
+      <td>
+         <?php echo $this->dre->DREE_VL_Lucro_Periodo; ?>
+      </td>
+   </tr>
+   
+</tbody>
+</table>
+
+
+
+</div>

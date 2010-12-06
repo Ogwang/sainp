@@ -1,0 +1,59 @@
+
+<div id='param_user'>
+
+<form action="<?php echo $this->baseUrl(); ?>/parameters/updateuser" method="post">
+<table>
+<tbody>
+   <tr class="tableRow1">
+      <td>
+         Nome:
+      </td>
+      <td>
+         <input type="text" name="firstname" id="firstname" value="<?php echo $this->escape($this->user->CAUS_TX_Nome); ?>">
+      </td>
+   </tr>
+   <tr class="tableRow2">
+      <td>
+         Sobrenome:
+      </td>
+      <td>
+         <input type="text" name="lastname" id="lastname" value="<?php echo $this->escape($this->user->CAUS_TX_Sobrenome); ?>">
+      </td>
+   </tr>
+   <tr class="tableRow1">
+      <td>
+         Senha:
+      </td>
+      <td>
+         <input type="password" name="password" id="password" value="<?php echo $this->escape($this->user->CAUS_TX_Senha); ?>">
+      </td>
+   </tr>
+   <tr class="tableRow2">
+      <td>
+         Confirmacao de Senha:
+      </td>
+      <td>
+         <input type="password" name="rptpassword" id="rptpassword">
+      </td>
+   </tr>
+   <tr class="tableRow1">
+      <td>
+         Data de Nascimento:
+      </td>
+      <td>
+         <input type="text" name="day" id="day" size="2" value="<?php echo $this->escape($this->user->CAUS_NM_Dia_Nascimento); ?>"> / <input type="text" name="month" id="month" size="2" value="<?php echo $this->escape($this->user->CAUS_NM_Mes_Nascimento); ?>"> / <input type="text" name="year" id="year" size="4" value="<?php echo $this->escape($this->user->CAUS_NM_Ano_Nascimento); ?>">
+      </td>
+   </tr>
+</tbody>
+</table>
+<input type="submit" name="salvar" id="salvar" value="Salvar" class="Formulario_Botao">
+</form>
+
+
+
+
+
+
+
+
+</div>

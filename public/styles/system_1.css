@@ -1,0 +1,123 @@
+
+/* estilos para IDs */
+
+#container {
+	width: 900px;
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: white;
+	height: 100%;
+	text-align: left;
+	
+}
+
+#sysheader {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10px;
+	COLOR: #2b3a73;
+	BACKGROUND-COLOR: #000033;
+	margin: 0 0 3px 0;
+}
+
+#sysheader a {
+	float:right;
+	color: white;
+}
+
+#left {
+	
+}
+
+#right {
+	float: right;
+}
+
+#sysnavigation {
+	font-weight:normal;
+	font-size:12px;
+	color:#FFFFFF;
+	background-color: #ACB9B8;
+	position: absolute;
+	
+	height: 85%;
+	float: left;
+}
+
+#sysnavigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#sysnavigation li {
+	line-height: 2em;
+	border: 0.1em solid #ACB9B8;
+	color: #0d2474;
+	background-color: white;
+}
+
+#sysnavigation li:hover {
+	background-color: #E0E0E0;
+	padding: 0;
+	boder: 0
+}
+
+#controllerNav {
+	float: left;
+	position: absolute;
+	
+	left: 400px;
+	background-color: #0000A0;
+	border-color: white;
+	
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+
+#controllerNav a:link {
+	font-style: normal;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#controllerNav a:visited {
+	font-style: normal;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#controllerNav a:hover {
+	text-decoration: underline;
+}
+
+#controllerNav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#controllerNav li {
+	height: 2em;
+	line-height: 2em;
+	float: left;
+	display: block;
+	border: 0.1em solid #dcdce9;
+	color: #0d2474;
+	text-decoration: none;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#controllerNav li:hover {
+	background-color: #7575FF;
+}
+
+#main {
+	float: top;
+	position: absolute;
+	top: 100px;
+	left: 400px;
+}

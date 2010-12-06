@@ -1,0 +1,85 @@
+<div id='portfolio'>
+
+<?php if (isset($this->portfolio[0])) { ?>
+<table>
+<thead>
+   <tr>
+      <th>
+         &nbsp;
+      </th>
+      <th>
+         Ativo
+      </th>
+      <th>
+         Quantidade
+      </th>
+      <th>
+         % Carteira
+      </th>
+      <th>
+         Rentabilidade
+      </th>
+      <th>
+         Risco
+      </th>
+      <th>
+         VaR
+      </th>
+   </tr>
+</thead>
+<tbody>
+   <?php foreach ($this->portfolio as $key => $stock) { ?>
+   <tr class="tableRow1">
+      <td>
+         <input type="checkbox">
+      </td>
+      <td>
+         <a href="<?php echo $this->baseUrl(); ?>/research/summary/code/<?php echo $this->escape($this->company[$stock->COAT_TX_ID])?>"><?php echo $this->escape($stock->COAT_TX_ID); ?></a>
+      </td>
+      <td>
+         <?php echo $this->number($stock->CART_NM_Quantidade) ?>
+      </td>
+      <td>
+         <?php echo $this->percent($this->weights[$stock->COAT_TX_ID], 1); ?>
+      </td>
+      <td>
+         <?php echo $this->percent($this->returns[$key], 1); ?>
+      </td>
+      <td>
+         <?php echo $this->percent($this->stddev[$key], 1); ?>
+      </td>
+      <td>
+         <?php echo $this->number($this->VaR[$key], 2) ?>
+      </td>
+   </tr>
+   <?php } ?>
+</tbody>
+<tfoot>
+   <tr>
+      <td>
+         
+      </td>
+      <td>
+         Total
+      </td>
+      <td>
+         &nbsp;
+      </td>
+      <td>
+         100%
+      </td>
+      <td>
+         <?php echo $this->percent($this->portReturn, 1); ?>
+      </td>
+      <td>
+         <?php echo $this->percent($this->portStdDeviation, 1); ?>
+      </td>
+      <td>
+         <?php echo $this->number($this->portVaR, 2) ?>
+      </td>
+   </tr>
+</tfoot>
+</table>
+<?php } else {echo "Nao ha acoes na sua carteira";} ?>
+
+</div>
